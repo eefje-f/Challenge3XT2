@@ -1,0 +1,136 @@
+html{
+  box-sizing: border-box;
+  margin: auto;
+  font-family: roboto;
+}
+body {
+  margin: 5vh 5vw;
+  background-image: linear-gradient(to bottom, #A6A9AC, #545657);
+}
+
+.container{
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 0.01fr 0.2fr 1fr 0.2fr;
+  grid-template-areas:
+  "title"
+  "logo"
+  "instructions"
+  "map"
+  "time";
+}
+
+.title{
+  padding: 20px auto;
+  font-weight: 600;
+  font-size: 40px;
+  text-align: center;
+  text-transform: capitalize;
+  background-color:none;
+  grid-area: title;
+  animation-name: animation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animation {
+  0%   {color: #074381;}
+  25%  {color: #0D86FF;}
+  50%  {color: #75BAFF;}
+  100% {color: #0D86FF;}
+}
+
+.logo{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: none;
+  grid-area: logo;
+  width: 80%;
+  text-align: center;
+}
+
+.logo img{
+  width: 100%;
+}
+
+.instructions{
+  padding: 20px auto;
+  text-align: center;
+  background-color: none;
+  grid-area: instructions;
+  font-weight: 600;
+  font-size: 25px;
+  color:white;
+}
+
+.map {
+  background-color: pink;
+  grid-area: map;
+  height: 90vh;
+  width: 90vw;
+}
+
+.time{
+  text-align: center;
+  background-color: black;
+  border-radius: 20px;
+  padding: 20px auto;
+  background-color: none;
+  grid-area: time;
+  font-weight: 600;
+  font-size: 40px;
+  color:white;
+}
+
+.clock{
+  font-weight: 600;
+  font-size: 40px;
+  color:white;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px){
+  .container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.01fr 0.2fr 1fr 0.2fr;
+    grid-template-areas:
+    "title"
+    "logo"
+    "instructions"
+    "map"
+    "time";
+  }
+  .instructions{
+    font-size: 30px;}
+}
+
+@media only screen and (min-width: 1280px){
+  .container{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 1fr 0.25fr;
+    grid-template-areas:
+    "title title"
+    "logo instructions"
+    "map map"
+    "time time";
+  }
+  .instructions{
+    font-size: 35px;}
+}
+
+@media only screen and (min-width:1920px){
+  .container{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 1fr 0.25fr;
+    grid-template-areas:
+    "title title"
+    "logo instructions"
+    "map map"
+    "time time";
+  }
+  .instructions{
+    font-size: 40px;
+}
+}
